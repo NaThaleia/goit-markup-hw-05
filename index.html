@@ -66,8 +66,8 @@
       <section class="main">
         <div class="container">
           <h1 class="main-section">Эффективные решения для вашего бизнеса</h1>
-          <!-- Кнопка заказа услуги -->
-          <button type="button" class="button-primary">Заказать услугу</button>
+          <!-- Кнопка заказа услуги. Вызывает модальное окно -->
+          <button type="button" class="button-primary" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!-- Секция услуг -->
@@ -525,6 +525,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-close-btn" type="button" data-modal-close>
+          <svg class="modal-close-icon" width="18" height="18">
+            <use href="./images/symbol-defs.svg#close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
     <!-- Подключили скрипт -->
     <script src="./js/modal.js"></script>
   </body>
