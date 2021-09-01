@@ -5,6 +5,7 @@
   --background-color: #e5e5e5;
   --background-context-color: #f5f4fa;
   --rare-text-color: #ffffff;
+  --time-deploy: cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Задали глобальное нормальное наследование */
 
@@ -247,6 +248,7 @@ button {
   background-color: #f5f4fa;
   border-radius: 4px;
 }
+/* Секция Студия */
 /* Убрали ненужный паддинг в секции Студия */
 .section.features-section {
   padding-top: 0;
@@ -254,20 +256,35 @@ button {
 /* Оформили положение секции Студия */
 .studio {
   display: flex;
-  flex-wrap: wrap;
   margin-top: 50px;
 }
 .studio-item {
+  position: relative;
   width: 370px;
   margin-right: 30px;
 }
 .studio-item:nth-child(3n) {
   margin-right: 0;
 }
-.section-img {
-  display: block;
+/* Оформили надписи поверх картинки */
+.desc {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(47, 48, 58, 0.8);
+  color: var(--rare-text-color);
+  text-align: center;
+  border-radius: 0px 0px 4px 4px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  margin: 0;
 }
-/* Оформили стили имен и профессий */
+/* Оформили стили имен и профессий в секции Команда*/
 .command {
   background-color: #f5f4fa;
 }
