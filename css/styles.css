@@ -443,7 +443,28 @@ button {
   border: 1px solid #ececec;
   border-top: 0;
 }
-
+/* Оформили текст на выплывающем окошке в Портфолио */
+.text-hidden {
+  position: absolute;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  top: 0;
+  padding: 63px 24px;
+  width: 100%;
+  color: #ffffff;
+  background-color: rgba(33, 149, 243, 0.9);
+  border-bottom: 0;
+  margin: 0;
+  overflow: auto;
+  transform: translateY(100%);
+  transition: transform 250ms var(--time-deploy);
+}
+/* Задали relative на див для позиционирования */
+.card-thumb {
+  position: relative;
+  overflow: hidden;
+}
 /* Добавили стили ссылок в Футер */
 .link-bottom {
   display: block;
@@ -539,6 +560,11 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+/* Сделали выплывающие синие окошки */
+.portfolio-link:hover .text-hidden,
+.portfolio-link:focus .text-hidden {
+  transform: translateY(0%);
+}
 /* Оформили логотип в Футер */
 .logo-bottom {
   display: block;
@@ -598,12 +624,10 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
-  opacity: 1;
-  visibility: visible;
+  transition: opacity 250ms var(--time-deploy), visibility 250ms var(--time-deploy);
 }
 .backdrop.is-hidden {
   visibility: hidden;
@@ -618,18 +642,21 @@ button {
   min-width: 528px;
   min-height: 581px;
   background-color: var(--rare-text-color);
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
 .modal-close-btn {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: auto;
   cursor: pointer;
   width: 30px;
   height: 30px;
+  top: 8px;
+  right: 8px;
+  padding: 0;
   background: var(--rare-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
