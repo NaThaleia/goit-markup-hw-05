@@ -662,9 +662,9 @@ button {
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon {
   fill: var(--accent-color);
-  transition: fill 250ms var(--time-deploy);
 }
 .modal-close-icon {
+  transition: fill 250ms var(--time-deploy);
 }
 /* Оформили позиционирование секций футера */
 .footer-position .footer-left + .footer-right {
