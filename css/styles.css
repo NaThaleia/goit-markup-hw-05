@@ -23,6 +23,7 @@
   padding: 0px;
   animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s alternate both;
 } */
+/* Анимация с исчезновением при ховере и фокусе */
 @keyframes fadeOut {
   0% {
     opacity: 1;
@@ -54,7 +55,7 @@ ul {
   margin-bottom: 0;
   padding-left: 0;
 }
-/* Убрали подчеркивания со всех ссылок, иметь в виду, если нужна ссылка с подчеркиванием  */
+/* Убрали подчеркивания со всех ссылок, иметь в виду, если нужна ссылка с подчеркиванием. Так же с анимацией.  */
 a {
   text-decoration: none;
   transition: color 250ms var(--time-deploy);
@@ -242,6 +243,7 @@ button {
   max-width: 696px;
   margin: 0 auto 30px;
 }
+/* Секция услуг */
 /* Оформили заголовки услуг */
 .title {
   font-weight: bold;
@@ -329,6 +331,7 @@ button {
   padding-bottom: 27px;
   margin: 0;
 }
+/* Секция Команда */
 /* Оформили стили имен и профессий в секции Команда*/
 .command {
   background-color: #f5f4fa;
@@ -429,7 +432,7 @@ button {
   color: #afb1b8;
   transition: color 250ms var(--time-deploy);
 }
-/* Задали размеры, цвет ховера и фокуса */
+/* Задали общие размеры и цвет при ховере и фокусе */
 .client-icon {
   fill: currentColor;
   color: #afb1b8;
@@ -480,7 +483,7 @@ button {
   border: 1px solid #ececec;
   border-top: 0;
 }
-/* Оформили текст на выплывающем окошке в Портфолио */
+/* Оформили текст на синем оверлее (выплывающем окошке) в Портфолио */
 .text-hidden {
   position: absolute;
   font-size: 18px;
@@ -497,7 +500,7 @@ button {
   transform: translateY(100%);
   transition: transform 250ms var(--time-deploy);
 }
-/* Задали relative на див для позиционирования */
+/* Задали relative на див для позиционирования оверлея */
 .card-thumb {
   position: relative;
   overflow: hidden;
@@ -591,7 +594,7 @@ button {
 .button-primary:focus {
   background-color: #188ce8;
 }
-/* Задали ховер и фокус карточкам */
+/* Задали ховер и фокус карточкам в Портфолио*/
 .portfolio-link {
   display: block;
 }
@@ -600,7 +603,7 @@ button {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-/* Сделали выплывающие синие окошки */
+/* Сделали выплывающие синие окошки в Портфолио*/
 .portfolio-link:hover .text-hidden,
 .portfolio-link:focus .text-hidden {
   transform: translateY(0%);
