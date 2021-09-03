@@ -209,7 +209,6 @@ button {
 .contact-link.current::after {
   content: '';
   position: absolute;
-  opacity: 1;
   display: block;
   bottom: 0;
   width: 100%;
