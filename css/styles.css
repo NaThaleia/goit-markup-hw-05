@@ -7,6 +7,36 @@
   --rare-text-color: #ffffff;
   --time-deploy: cubic-bezier(0.4, 0, 0.2, 1);
 }
+/* Анимация с тенью при ховере
+@keyframes bouncing {
+  0% {
+    bottom: 0;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  100% {
+    bottom: 1px;
+    box-shadow: 0 25px 25px #2196f3;
+  }
+}
+.logo.logo-animation:hover {
+  border-radius: 4px;
+  padding: 0px;
+  animation: bouncing 0.5s cubic-bezier(0.1, 0.25, 0.1, 1) 0s alternate both;
+} */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.logo.logo-animation:hover,
+.logo.logo-animation:focus,
+.logo-bottom.logo-animation:hover,
+.logo-bottom.logo-animation:focus {
+  animation: fadeOut 1s both;
+}
 /* Задали глобальное нормальное наследование */
 
 p,
@@ -27,6 +57,8 @@ ul {
 /* Убрали подчеркивания со всех ссылок, иметь в виду, если нужна ссылка с подчеркиванием  */
 a {
   text-decoration: none;
+  transition: color 250ms var(--time-deploy);
+  transition: background-color 250ms var(--time-deploy);
 }
 /* Убрали точки со списков */
 .list {
@@ -143,6 +175,7 @@ button {
 .adress-icon {
   margin-right: 10px;
   fill: currentColor;
+  transition: fill 250ms var(--time-deploy);
 }
 .adress-icon:hover,
 .adress-icon:focus {
@@ -350,6 +383,7 @@ button {
 }
 .command-icon {
   fill: #afb1b8;
+  transition: fill 250ms var(--time-deploy);
 }
 /* Оформили имена и профессии */
 .names {
@@ -392,11 +426,13 @@ button {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
+  transition: color 250ms var(--time-deploy);
 }
 /* Задали размеры, цвет ховера и фокуса */
 .client-icon {
   fill: currentColor;
   color: #afb1b8;
+  transition: fill 250ms var(--time-deploy);
 }
 .client-link:hover,
 .client-link:focus {
@@ -508,6 +544,8 @@ button {
   background-color: var(--background-context-color);
   border-color: transparent;
   cursor: pointer;
+  transition: color 250ms var(--time-deploy), background-color 250ms var(--time-deploy),
+    box-shadow 250ms var(--time-deploy);
 }
 .style-scope-button:hover,
 .style-scope-button:focus {
@@ -545,6 +583,7 @@ button {
   background-color: var(--accent-color);
   border-color: transparent;
   cursor: pointer;
+  transition: color 250ms var(--time-deploy), background-color 250ms var(--time-deploy);
 }
 /* Оформили ховер и фокус кнопке в Студия */
 .button-primary:hover,
@@ -615,15 +654,21 @@ button {
 .footer-icon {
   fill: currentColor;
 }
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: var(--accent-color);
+  transition: fill 250ms var(--time-deploy);
+}
+.modal-close-icon {
+}
 /* Оформили позиционирование секций футера */
 .footer-position .footer-left + .footer-right {
   margin-left: 70px;
 }
-/* Оформили бекдроп */
+/* Оформили бекдроп. Позиция фиксед, чтоб не проскролливался */
 .backdrop {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -639,7 +684,7 @@ button {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
   background-color: var(--rare-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
@@ -657,7 +702,7 @@ button {
   top: 8px;
   right: 8px;
   padding: 0;
-  background: var(--rare-text-color);
+  background-color: unset;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
