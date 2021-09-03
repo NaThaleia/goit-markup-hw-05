@@ -58,9 +58,8 @@ ul {
 /* Убрали подчеркивания со всех ссылок, иметь в виду, если нужна ссылка с подчеркиванием. Так же с анимацией.  */
 a {
   text-decoration: none;
-  transition: color 250ms var(--time-deploy);
-  transition: background-color 250ms var(--time-deploy);
 }
+
 /* Убрали точки со списков */
 .list {
   list-style: none;
@@ -168,6 +167,7 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
+  transition: color 250ms var(--time-deploy);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -192,6 +192,7 @@ button {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--secondary-text-color);
+  transition: color 250ms var(--time-deploy);
 }
 .adress-link:hover,
 .adress-link:focus {
@@ -374,6 +375,7 @@ button {
   justify-content: center;
   border-radius: 50%;
   background-color: var(--rare-text-color);
+  transition: background-color 250ms var(--time-deploy);
 }
 .command-link-link:hover,
 .command-link-link:focus {
@@ -428,7 +430,7 @@ button {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   color: #afb1b8;
-  transition: color 250ms var(--time-deploy);
+  transition: border-color 250ms var(--time-deploy);
 }
 /* Задали общие размеры и цвет при ховере и фокусе */
 .client-icon {
@@ -648,6 +650,7 @@ button {
   border-radius: 50%;
   color: var(--rare-text-color);
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms var(--time-deploy);
 }
 .footer-link:hover,
 .footer-link:focus {
